@@ -68,9 +68,10 @@ Vegas Scavenger Hunt is an iOS Application created with Swift, by a student orga
 
 <img src="http://g.recordit.co/LwVClP6G08.gif" width=400>
 
-### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
+
+Interactive Prototype can be viewed here: https://www.figma.com/file/Xg2hfX2mlsesFcS4GWt4ukhp/Vegas-Scavenger-Hunt?node-id=0%3A1
 
 ## Schema 
 [This section will be completed in Unit 9]
