@@ -8,7 +8,7 @@
 
 ## Overview
 ### Description
-Vegas Scavennger Hunt is an iOS Application created with Swift, by a student organization of The College of Southern Nevada. The app will lead users on various themed scavenger hunts throughout Las Vegas. They will take pictures of the required areas, earning points and badges for each place they visit. This would lead to many opportunities for advertising of nearby businesses and attractions.
+Vegas Scavenger Hunt is an iOS Application created with Swift, by a student organization of The College of Southern Nevada. The app will lead users on various themed scavenger hunts throughout Las Vegas. They will take pictures of the required areas, earning points and badges for each place they visit. This would lead to many opportunities for advertising of nearby businesses and attractions.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
