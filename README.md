@@ -61,7 +61,7 @@ Vegas Scavennger Hunt is an iOS Application created with Swift, by a student org
 
 ## Wireframes
 Digital Wireframe
-<img src="https://files.slack.com/files-pri/TH07GBWCS-FH1M96QKW/vegas_scavenger_hunt_wireframe.png" width = 600>
+<img src="https://imgur.com/CFtpTq4" width = 600>
 
 Gif Wireframe Model
 <img src="http://g.recordit.co/LwVClP6G08.gif" width=400>
