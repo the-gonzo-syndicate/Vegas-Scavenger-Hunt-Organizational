@@ -55,8 +55,9 @@ Vegas Scavenger Hunt is an iOS Application created with Swift, by a student orga
    * User can view a leaderboard.
 * Detail
    * User can see details of a scavenger hunt.
-* Creation 
+* Detail 
    * User can see details of a scavenger hunt stop.
+*Creation
    * User can record visiting a scavenger hunt stop.
    * User can take a picture at a scavenger hunt stop.
    * User gains points for visiting places/completing scavenger hunts.
@@ -68,6 +69,9 @@ Vegas Scavenger Hunt is an iOS Application created with Swift, by a student orga
 * Profile
 * Scavenger Hunt Feed
 * Leaderboard
+
+* Scavenger Hunt Stop Detail
+* Scavenger Hunt Stop Creation
 
 **Flow Navigation** (Screen to Screen)
 
