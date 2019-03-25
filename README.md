@@ -80,6 +80,9 @@ Vegas Scavenger Hunt is an iOS Application created with Swift, by a student orga
 
 * Login Page
    * => Scavenger Hunt Feed
+   * => Registration Screen
+* Registration Screen
+   * => Scavenger Hunt Feed
 * Scavenger Hunt Feed
    * => Scavenger Hunt Detail
 * Scavenger Hunt Detail
