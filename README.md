@@ -45,30 +45,33 @@ Vegas Scavenger Hunt is an iOS Application created with Swift, by a student orga
 ### 2. Screen Archetypes
 
 * Login Screen
-   * User can create a new account.
    * User can login.
+* Registration Screen
+   * User can create a new account.
 * Stream
    * User can scroll through a list of scavenger hunts.
 * Profile
    * User can view a profile page.
-* Detail
+* Stream
    * User can view a leaderboard.
 * Detail
    * User can see details of a scavenger hunt.
 * Detail 
    * User can see details of a scavenger hunt stop.
-*Creation
+* Creation
    * User can record visiting a scavenger hunt stop.
    * User can take a picture at a scavenger hunt stop.
    * User gains points for visiting places/completing scavenger hunts.
 
 ### 3. Navigation
 
-**Tab Navigation** (Tab to Screen)
+**1st Tab Navigation** (Tab to Screen)
 
 * Profile
 * Scavenger Hunt Feed
 * Leaderboard
+
+**2nd Tab Navigation**
 
 * Scavenger Hunt Stop Detail
 * Scavenger Hunt Stop Creation
@@ -87,16 +90,16 @@ Vegas Scavenger Hunt is an iOS Application created with Swift, by a student orga
 ## Wireframes
 **Digital Wireframe**
 
-<img src="https://github.com/the-gonzo-syndicate/Vegas-Scavenger-Hunt-Organizational/blob/master/Vegas_Scavenger_Hunt_Wireframe_2.PNG" width=600>
+<img src="https://github.com/the-gonzo-syndicate/Vegas-Scavenger-Hunt-Organizational/blob/master/Vegas_Scavenger_Hunt_Wireframe_3.PNG" width=600>
 
 **Gif Wireframe Model**
 
-<img src="http://g.recordit.co/IuUH5KnlJQ.gif" width=400>
+<img src="http://g.recordit.co/7SP7IEA9dI.gif" width=400>
 
 
 ### [BONUS] Interactive Prototype
 
-Interactive Prototype can be viewed here: https://www.figma.com/file/Xg2hfX2mlsesFcS4GWt4ukhp/Vegas-Scavenger-Hunt?node-id=0%3A1
+Interactive Prototype can be viewed here: https://www.figma.com/proto/Xg2hfX2mlsesFcS4GWt4ukhp/Vegas-Scavenger-Hunt?node-id=3%3A2&scaling=scale-down
 
 ## Schema 
 [This section will be completed in Unit 9]
