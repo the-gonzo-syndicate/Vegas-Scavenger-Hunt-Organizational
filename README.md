@@ -149,6 +149,31 @@ Interactive Prototype can be viewed here: https://www.figma.com/proto/Xg2hfX2mls
 
 
 ### Networking
-- [Add list of network requests by screen ]
+* Login Screen
+   * (Read/GET) Query matching username and password
+      ```swift
+      @IBAction func onLogin(_ sender: Any) {
+        
+          let username = usernameField.text!
+          let password = passwordField.text!
+        
+          PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
+              if user != nil {
+                  self.performSegue(withIdentifier: "loginSegue", sender: nil)
+              } else {
+                  print("Error: \(String(describing: error?.localizedDescription))")
+              }
+          }
+      }
+      ```
+   
+   
+   
+   
+   
+   
+   
+   
+   
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
