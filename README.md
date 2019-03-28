@@ -166,14 +166,162 @@ Interactive Prototype can be viewed here: https://www.figma.com/proto/Xg2hfX2mls
           }
       }
       ```
-   
-   
-   
-   
-   
-   
-   
-   
-   
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+* Registration Screen
+   * (Create/POST) Create user with username, password, and Email
+      ```swift
+      @IBAction func onSignUp(_ sender: Any) {
+        
+          let user = PFUser()
+          
+          user.userName = usernameField.text
+          user.userPass = passwordField.text
+          user.userEmail = emailField.text
+        
+          user.signUpInBackground { (success, error) in
+              if success {
+                  self.performSegue(withIdentifier: "loginSegue", sender: nil)
+              } else {
+                  print("Error: \(String(describing: error?.localizedDescription))")
+              }
+          }
+      }
+      ```
+* Profile Screen
+   * (Update/PUT) Change a user's profile image
+      ```swift
+      let user = PFObject(className: "User")
+        
+      let imageData = imageView.image!.pngData()
+      let file = PFFileObject(data: imageData!)
+        
+      user["profileImg"] = file
+        
+      .saveInBackground { (success, error) in
+          if success {
+              self.dismiss(animated: true, completion: nil)
+              print("saved!")
+          } else {
+              print("error!")
+          }
+      }
+      ```
+   * (Read/GET) Fetch username, hunts completed, stops completed, points, and profile picture
+      ```swift
+      let query = PFQuery(className: "User")
+      
+      query.selectKeys(["userName", "profileImg", "huntCount", "stopCOunt", "pointsCount"])
+      
+      query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+          if let error = error {
+              print(error.localizedDescription)
+          } else if let objects = objects {
+              print("Success") 
+              for object in objects {
+                  print(object.objectId as Any)
+              }
+          }
+      }
+      ```
+* Leaderboard Screen
+   * (Read/GET) Fetch users with highest point, hunt, and stop totals
+      ```swift
+      var query = PFUser.query()
+      
+      query.selectKeys(["userName", "pointsCount", "huntCount", "stopCount"])
+      
+      query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+          if let error = error {
+              print(error.localizedDescription)
+          } else if let objects = objects {
+              print("Success") 
+              for object in objects {
+                  print(object.objectId as Any)
+              }
+          }
+      }
+      ```
+* Hunts Feed Screen
+   * (Read/Get) Fetch details of hunts for individual Cells
+      ```swift
+      let query = PFQuery(className: "Hunt")
+      
+      query.selectKeys(["huntName", "huntImg", "huntBio", "huntStops", "huntPointVal", "huntDifficulty"])
+      
+      query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+          if let error = error {
+              print(error.localizedDescription)
+          } else if let objects = objects {
+              print("Success") 
+              for object in objects {
+                  print(object.objectId as Any)
+              }
+          }
+      }
+      ```
+   * (Read/GET) Fetch stops user has completed on each hunt Cell (Progress Bar)
+      ```swift
+      let query = PFQuery(className: "User")
+      
+      query.includeKey("huntArray")
+      
+      query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+          if let error = error {
+              print(error.localizedDescription)
+          } else if let objects = objects {
+              print("Success") 
+              for object in objects {
+                  print(object.objectId as Any)
+              }
+          }
+      }
+      ```
+* Hunt Detail Screen
+   * (Read/GET) Fetch all hunt details
+      ```swift
+      let query = PFQuery(className: "Hunt")
+      
+      query.selectKeys(["huntName", "huntImg", "huntBio", "huntStops", "huntPointVal", "huntDifficulty"])
+      
+      query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+          if let error = error {
+              print(error.localizedDescription)
+          } else if let objects = objects {
+              print("Success") 
+              for object in objects {
+                  print(object.objectId as Any)
+              }
+          }
+      }
+      ```
+* Stop Detail Screen
+   * (Read/GET) Fetch all stop details
+      ```swift
+      let query = PFQuery(className: "Stop")
+      
+      query.selectKeys(["stopName", "stopImg", "stopBio", "stopPointVal"])
+      
+      query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+          if let error = error {
+              print(error.localizedDescription)
+          } else if let objects = objects {
+              print("Success") 
+              for object in objects {
+                  print(object.objectId as Any)
+              }
+          }
+      }
+      ```
+* Location Capture Screen
+   * (Create/Post) Capture GeoLocation, Picture, and add stop information to users visited stops
+      ```swift
+      let locationCapture = PFObject(className:"Stop")
+      
+      locationCapture["stopCoords"] = picture
+      locationCapture["stopImg"] = coords
+      
+      // query for searching GeoLocations of all stops to match collected stop
+      
+      ```
+### API endpoints
+* No API endpoints are used
+
