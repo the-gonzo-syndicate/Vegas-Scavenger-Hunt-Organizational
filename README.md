@@ -105,9 +105,49 @@ Vegas Scavenger Hunt is an iOS Application created with Swift, by a student orga
 Interactive Prototype can be viewed here: https://www.figma.com/proto/Xg2hfX2mlsesFcS4GWt4ukhp/Vegas-Scavenger-Hunt?node-id=3%3A2&scaling=scale-down
 
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+
+#### User
+
+| Property      | Type        | Description   |
+|---------------|-------------|---------------|
+| userID        | Number      | Unique ID given to each user | 
+| userName      | String      | Unique name for user credentials |
+| userPass      | String      | Unique password for user credentials |
+| userEmail     | String      | User supplied Email address |
+| profileImg    | File        | User loaded profile image |
+| huntCount     | Number      | Number of Scavenger Hunts completed by user |
+| stopCount     | Number      | Number of Scavenger Hunt stops visited by user |
+| pointsCount   | Number      | Number of points collected over time by user |
+| huntArray     | Array       | Array of completed Scavenger Hunts |
+| stopArray     | Array       | Array of completed Scavenger Hunt Stops |
+
+#### Hunt
+
+| Property        | Type    | Description   |
+|-----------------|---------|---------------|
+| huntID          | Number  | Unique ID given to each Scavenger Hunt |
+| huntName        | String  | Name given to each Scavenger Hunt |
+| huntImg         | File    | Image assiciated with the Scavenger Hunt |
+| huntBio         | String  | Information about the Scavenger Hunt for Detail Screen |
+| huntStops       | Array   | Stops associated with this Scavenger Hunt |
+| huntPointVal    | Number  | Point value associated with the completion of the Scavenger Hunt |
+| huntDifficulty  | String  | Difficulty value set to the Scavenger Hunt |
+
+#### Stop
+
+| Property        | Type        | Description   |
+|-----------------|-------------|---------------|
+| stopID          | Number      | Unique ID given to each Scavenger Hunt Stop |
+| stopName        | String      | Name given to each Scavenger Hunt Stop |
+| stopImg         | File        | Image associated with the Scavenger Hunt Stop |
+| stopBio         | String      | Information about the Scavenger Hunt Stop for Detail Screen |
+| inHunt          | String      | Scavenger Hunt the Stop is a member of |
+| stopCoords      | GeoLocation | Geographic Coordinates of Scavenger Hunt Stop |
+| stopPointVal    | Number      | Point value associated with finding the Scavenger Hunt Stop |
+
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
